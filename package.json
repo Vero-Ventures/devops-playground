@@ -6,9 +6,12 @@
     "prettier": "3.2.5"
   },
   "lint-staged": {
-    "*/": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "prettier --write --ignore-unknown"
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
     ]
   },
   "scripts": {
