@@ -12,3 +12,7 @@ def test_average_score():
     assert (
         calculated_average == expected_average
     ), "Average score is incorrect in DataFrame"
+
+
+def test_division():
+    assert 10 / 2 == 5, "Division result is incorrect"
