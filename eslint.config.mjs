@@ -24,6 +24,7 @@ export default [
             'semi': ['error', 'always'],  // Require semicolons
             'quotes': ['error', 'double'],  // Enforce double quotes
             'indent': ['error', 2],  // Enforce 2-space indentation
+            'no-console': 'warn',  // Warn about console.log
         },
     },
     ...compat.extends('eslint:recommended'),  // Use recommended rules (ESLint 8+
