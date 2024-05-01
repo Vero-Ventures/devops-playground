@@ -13,9 +13,12 @@ export default [
     {
         languageOptions: {
             globals: {
-                React: 'writable',  // Global React variable
-                module: 'writable',  // For module imports/exports
-                process: 'writable',  // Node.js process
+                console: 'readonly',  // Fixes 'console is not defined'
+                React: 'writable',  // Define React as writable
+                window: 'readonly',  // Browser global
+                document: 'readonly',  // Browser global
+                module: 'writable',  // Node.js global
+                process: 'writable',  // Node.js global
             },
         },
         ignores: ['*.py', 'node_modules/'],  // Ignore Python files
@@ -24,7 +27,6 @@ export default [
             'semi': ['error', 'always'],  // Require semicolons
             'quotes': ['error', 'double'],  // Enforce double quotes
             'indent': ['error', 2],  // Enforce 2-space indentation
-            'no-console': 'warn',  // Warn about console.log
         },
     },
     ...compat.extends('eslint:recommended'),  // Use recommended rules (ESLint 8+
