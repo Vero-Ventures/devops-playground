@@ -7,9 +7,9 @@
     "prettier": "3.2.5"
   },
   "lint-staged": {
-    "*/": [
+    "*.{js,jsx,ts,tsx,css,html}": [
       "eslint --fix",
-      "prettier --write --ignore-unknown"
+      "prettier --write"
     ]
   },
   "scripts": {
