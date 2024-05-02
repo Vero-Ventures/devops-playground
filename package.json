@@ -17,6 +17,12 @@
     ]
   },
   "scripts": {
-    "prepare": "husky"
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "pip install pre-commit && git config --unset-all core.hooksPath && pre-commit install && cd .. && husky .husky",
   }
 }
